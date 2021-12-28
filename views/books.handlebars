@@ -1,9 +1,0 @@
-<h1>Books</h1>
-<div class="books-container form">
-  <a href="/">Adicionar livros</a>
-  {{#each books}}
-  <div>
-    #{{this.id}} - <span class="bold"><a href="/books/{{this.id}}">{{this.title}}</a></span> - {{this.pages}} páginas
-  </div>
-  {{/each}}
-</div>
