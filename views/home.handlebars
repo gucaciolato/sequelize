@@ -1,1 +1,11 @@
-<h1>Olá sequelize</h1>
+<h1>Usuários cadastrados:</h1>
+
+<div class="container">
+  {{#each users}}
+  <div class="item">
+    <h2>{{this.name}}</h2>
+    <p>{{this.occupation}}</p>
+    <p>{{#if this.newsletter}}Receber promoções{{/if}}</p>
+  </div>
+  {{/each}}
+</div>
