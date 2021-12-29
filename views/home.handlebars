@@ -6,6 +6,9 @@
     <h2>{{this.name}}</h2>
     <p>{{this.occupation}}</p>
     <p>{{#if this.newsletter}}Receber promoções{{/if}}</p>
+    <div class="actions">
+      <a href="/users/{{this.id}}">Ver detalhes</a>
+    </div>
   </div>
   {{/each}}
 </div>
