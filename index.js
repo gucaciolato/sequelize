@@ -57,6 +57,36 @@ app.post('/users/delete/:id', async (req, res) => {
   res.redirect('/');
 });
 
+app.get('/users/edit/:id', async (req, res) => {
+  const id = req.params.id
+  const user = await User.findOne({ raw: true,  where: { id: id } });
+  res.render('useredit', { user });
+});
+
+app.post('/users/update', async (req, res) => {
+  const id = req.body.id;
+  const name = req.body.name;
+  const occupation = req.body.occupation;
+  let newsletter = req.body.newsletter;
+
+  if (newsletter === 'on') {
+    newsletter = true;
+  } else {
+    newsletter = false;
+  }
+
+  const userData = {
+    id,
+    name,
+    occupation,
+    newsletter
+  };
+
+  await User.update(userData, { where: { id: id } });
+
+  res.redirect('/');
+});
+
 app.get('/', async (req, res) => {
   const users = await User.findAll({ raw: true });
   console.log(users)

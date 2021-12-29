@@ -118,3 +118,8 @@ h1, p {
   border-color: red;
   color: red;
 }
+
+.actions .edit-btn {
+  border-color: green;
+  color: green;
+}
