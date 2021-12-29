@@ -3,10 +3,11 @@
   margin: 0;
 }
 
-h1 {
+h1, p {
   text-align: center;
   margin-bottom: 1em;
 }
+
 
 .form {
   width: 450px;
@@ -93,4 +94,27 @@ h1 {
 
 .actions {
   display: flex;
+}
+
+.actions a,
+.actions input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.actions .details-btn {
+  border-color: blue;
+  color: blue;
+}
+
+.actions .delete-btn {
+  border-color: red;
+  color: red;
 }
